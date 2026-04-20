@@ -1,0 +1,12 @@
+plan.md
+chroma_db/
+.env
+__pycache__/
+node_modules/
+*.pyc
+.venv/
+frontend/dist/
+*.egg-info/
+.pytest_cache/
+.DS_Store
+
