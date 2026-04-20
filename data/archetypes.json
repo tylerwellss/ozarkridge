@@ -1,0 +1,730 @@
+[
+  {
+    "archetype": "backpacking_tent",
+    "category": "tents",
+    "subcategory": "backpacking_tents",
+    "brands": ["Big Agnes", "NEMO", "MSR", "REI Co-op", "Marmot", "Kelty"],
+    "name_patterns": [
+      "{brand} {series} {capacity}-Person Tent",
+      "{brand} {series} Ultralight {capacity}P",
+      "{brand} {series} {capacity}-Person Backpacking Tent"
+    ],
+    "series_names": ["Ridgeline", "Summit", "Crestview", "Alpine", "Horizon", "Talon", "Cirrus", "Arete", "Zephyr"],
+    "price_range": [179, 499],
+    "capacity_range": [1, 4],
+    "description_template": "The {name} is a {weight}-pound {season}-season backpacking tent designed for {use_case}. Features a {fly_type} rainfly with {waterproof_rating}mm waterproof coating and {pole_material} poles for a balance of strength and weight. The {floor_area} sq ft floor area comfortably fits {capacity} sleeper(s) with {vestibule_count} vestibule(s) providing sheltered gear storage. Packed size of {packed_size} fits easily in or on a pack. {extra_detail}",
+    "extra_details": [
+      "Interior mesh pockets and a gear loft keep essentials organized.",
+      "Color-coded pole sleeves allow for quick pitching even in fading light.",
+      "DAC stakes and guylines are included for high-wind stability.",
+      "Two doors provide easy entry and exit without climbing over your tent mate.",
+      "Reflective guylines improve nighttime visibility at camp.",
+      "Bathtub-style floor construction prevents water seepage in wet conditions."
+    ],
+    "attribute_ranges": {
+      "weight_lbs": [2.2, 5.8],
+      "seasons": [3, 4],
+      "fly_type": ["full-coverage", "partial-coverage", "integrated"],
+      "pole_material": ["aluminum", "carbon fiber", "DAC Featherlite NFL"],
+      "floor_area_sqft": [20, 58],
+      "vestibule_count": [1, 2],
+      "waterproof_rating_mm": [1200, 3000],
+      "packed_size": ["4x15 in", "5x17 in", "5x19 in", "6x21 in"]
+    },
+    "tag_pool": ["ultralight", "waterproof", "freestanding", "double-wall", "3-season", "4-season", "backpacking", "thru-hiking", "solo", "lightweight"],
+    "use_case_pool": ["weekend backpacking trips", "thru-hiking on the AT or PCT", "alpine camping above treeline", "bike touring and bikepacking", "solo overnight trips", "lightweight fastpacking"],
+    "unsplash_query": "backpacking tent wilderness"
+  },
+  {
+    "archetype": "car_camping_tent",
+    "category": "tents",
+    "subcategory": "car_camping_tents",
+    "brands": ["Coleman", "REI Co-op", "Kelty", "Eureka", "The North Face", "Big Agnes"],
+    "name_patterns": [
+      "{brand} {series} {capacity}-Person Camping Tent",
+      "{brand} {series} Family {capacity}P Tent",
+      "{brand} {series} {capacity}-Person Cabin Tent"
+    ],
+    "series_names": ["Basecamp", "Pinecrest", "Lakeside", "Meadow", "Timber", "Fireside", "Canyon", "Homestead"],
+    "price_range": [99, 399],
+    "capacity_range": [4, 8],
+    "description_template": "The {name} is a spacious {capacity}-person car camping tent with {peak_height} inches of peak height for easy movement inside. Built with {pole_material} poles and a {waterproof_rating}mm waterproof rated fly for reliable weather protection. The {floor_area} sq ft floor area offers room for the whole group with a {door_count}-door design for convenient access. Setup takes approximately {setup_time} minutes. {extra_detail}",
+    "extra_details": [
+      "Large mesh windows provide excellent cross-ventilation on warm nights.",
+      "Includes a removable room divider for privacy in family camping setups.",
+      "Electrical cord port allows you to run a power strip from a campsite outlet.",
+      "Front vestibule area is perfect for storing muddy boots and camp chairs.",
+      "Gear loft and wall pockets keep phones, flashlights, and books off the floor.",
+      "Welded floor seams eliminate the need for seam sealing and improve waterproofing."
+    ],
+    "attribute_ranges": {
+      "weight_lbs": [12, 28],
+      "peak_height_in": [60, 78],
+      "seasons": [3, 3],
+      "pole_material": ["steel", "fiberglass", "aluminum"],
+      "floor_area_sqft": [56, 130],
+      "door_count": [1, 2],
+      "waterproof_rating_mm": [1000, 2000],
+      "setup_time_min": [5, 20]
+    },
+    "tag_pool": ["family", "spacious", "car-camping", "cabin-style", "easy-setup", "waterproof", "room-divider", "tall-ceiling"],
+    "use_case_pool": ["family car camping", "campground weekends", "festival camping", "group camping trips", "base camp setups"],
+    "unsplash_query": "camping tent campground"
+  },
+  {
+    "archetype": "hammock_shelter",
+    "category": "tents",
+    "subcategory": "hammock_shelters",
+    "brands": ["ENO", "Kammok", "Hennessy", "Warbonnet", "Grand Trunk", "Sea to Summit"],
+    "name_patterns": [
+      "{brand} {series} Hammock System",
+      "{brand} {series} Camping Hammock",
+      "{brand} {series} Hammock with Rainfly"
+    ],
+    "series_names": ["Canopy", "Drift", "Stratos", "Treetop", "Skyline", "Nomad", "Breeze"],
+    "price_range": [69, 299],
+    "capacity_range": [1, 2],
+    "description_template": "The {name} is a {weight}-pound hammock shelter system rated to hold up to {weight_capacity} lbs. Made from {material} with a {suspension_type} suspension system for easy setup between trees. {rainfly_detail} The packed size of {packed_size} makes it an ultralight alternative to traditional tent camping. {extra_detail}",
+    "extra_details": [
+      "Integrated bug net keeps mosquitoes and no-see-ums out while you sleep.",
+      "Asymmetric design allows for a flatter lay and more comfortable side sleeping.",
+      "Includes whoopie sling suspension for tool-free length adjustment.",
+      "Compatible with most aftermarket underquilts for cold-weather hammocking.",
+      "Structural ridgeline maintains consistent sag for ergonomic comfort.",
+      "Stuff sack doubles as an internal gear pocket when the hammock is hung."
+    ],
+    "rainfly_details": [
+      "Includes a diamond-shaped silnylon tarp with 95% coverage against rain.",
+      "Sold with a hex-shaped rainfly offering full coverage in driving rain.",
+      "Comes with a lightweight tarp that packs down to the size of a water bottle."
+    ],
+    "attribute_ranges": {
+      "weight_lbs": [1.2, 3.5],
+      "weight_capacity_lbs": [250, 400],
+      "material": ["ripstop nylon", "parachute nylon", "Dyneema composite", "polyester taffeta"],
+      "suspension_type": ["whoopie sling", "daisy chain", "atlas straps", "tree-friendly webbing"],
+      "packed_size": ["4x6 in", "5x8 in", "6x10 in"]
+    },
+    "tag_pool": ["ultralight", "hammock", "bug-net", "rainfly-included", "tree-friendly", "backpacking", "compact", "solo"],
+    "use_case_pool": ["ultralight backpacking", "solo overnights", "warm-weather camping", "trail lounging and day use", "thru-hiking shelter alternative"],
+    "unsplash_query": "camping hammock forest"
+  },
+  {
+    "archetype": "down_sleeping_bag",
+    "category": "sleeping",
+    "subcategory": "sleeping_bags_down",
+    "brands": ["Western Mountaineering", "Feathered Friends", "REI Co-op", "Marmot", "Kelty", "Big Agnes"],
+    "name_patterns": [
+      "{brand} {series} {temp_rating}°F Down Sleeping Bag",
+      "{brand} {series} {temp_rating}° Down Bag",
+      "{brand} {series} Down Mummy Bag {temp_rating}°F"
+    ],
+    "series_names": ["Ember", "Glacier", "Polar", "Twilight", "Everest", "Aurora", "Solstice", "Zenith"],
+    "price_range": [199, 549],
+    "description_template": "The {name} is a premium down sleeping bag filled with {fill_power}-fill-power {down_type} down, offering exceptional warmth-to-weight ratio at just {weight} lbs. Comfort-rated to {temp_rating}°F with a {baffle_type} baffle construction that prevents cold spots. The {shell_material} shell resists moisture, and the {shape} shape balances thermal efficiency with room to move. Fits users up to {fits_to} inches tall. {extra_detail}",
+    "extra_details": [
+      "Draft collar and draft tube along the zipper seal out cold air infiltration.",
+      "Includes a compression stuff sack and a cotton storage sack for loft preservation.",
+      "DWR-treated down maintains loft even in damp conditions.",
+      "Trapezoidal foot box gives your feet room to rest naturally without compression.",
+      "Half-length zipper saves weight while still allowing temperature regulation.",
+      "Zipper guard prevents snags for smooth operation in the dark."
+    ],
+    "attribute_ranges": {
+      "weight_lbs": [1.5, 3.8],
+      "temp_rating_f": [-20, 35],
+      "fill_power": [600, 900],
+      "down_type": ["goose", "duck", "RDS-certified goose", "ethically-sourced goose"],
+      "baffle_type": ["horizontal", "vertical", "trapezoidal", "continuous"],
+      "shell_material": ["ripstop nylon", "Pertex Quantum", "20D polyester"],
+      "shape": ["mummy", "semi-rectangular", "tapered"],
+      "fits_to_in": [72, 78]
+    },
+    "tag_pool": ["down", "ultralight", "cold-weather", "mummy", "compressible", "3-season", "4-season", "winter", "premium"],
+    "use_case_pool": ["winter backpacking", "alpine expeditions", "cold-weather car camping", "shoulder-season trips", "high-altitude camping"],
+    "unsplash_query": "sleeping bag camping"
+  },
+  {
+    "archetype": "synthetic_sleeping_bag",
+    "category": "sleeping",
+    "subcategory": "sleeping_bags_synthetic",
+    "brands": ["Kelty", "REI Co-op", "The North Face", "Marmot", "Nemo", "Mountain Hardwear"],
+    "name_patterns": [
+      "{brand} {series} {temp_rating}°F Synthetic Sleeping Bag",
+      "{brand} {series} Synthetic {temp_rating}° Bag",
+      "{brand} {series} {temp_rating}°F Insulated Bag"
+    ],
+    "series_names": ["Trailmix", "Forge", "Cloudbed", "Outpost", "Blaze", "Duskfall", "Stormline"],
+    "price_range": [69, 249],
+    "description_template": "The {name} is a synthetic-insulated sleeping bag rated to {temp_rating}°F, using {insulation_type} insulation that retains warmth even when wet. Weighing {weight} lbs with a {shape} shape and {shell_material} shell. Features a {zipper_type} zipper and fits users up to {fits_to} inches. A reliable choice for {use_case} where moisture resistance matters more than minimal pack weight. {extra_detail}",
+    "extra_details": [
+      "Synthetic fill dries 3x faster than down, making it ideal for humid climates.",
+      "Pillow pocket at the hood lets you stuff a jacket for head support.",
+      "Two bags can zip together for a double-wide configuration.",
+      "Anti-snag zipper design for frustration-free operation in the tent.",
+      "Includes both a stuff sack and a mesh storage bag for home storage.",
+      "EN/ISO tested temperature rating gives you confidence in the bag's performance."
+    ],
+    "attribute_ranges": {
+      "weight_lbs": [2.0, 4.5],
+      "temp_rating_f": [10, 45],
+      "insulation_type": ["Thermolite", "Climashield APEX", "Heatseeker Eco", "PrimaLoft Silver"],
+      "shell_material": ["ripstop polyester", "50D polyester", "30D nylon"],
+      "shape": ["mummy", "semi-rectangular", "rectangular"],
+      "zipper_type": ["full-length", "half-length", "two-way"],
+      "fits_to_in": [72, 80]
+    },
+    "tag_pool": ["synthetic", "wet-weather", "budget-friendly", "moisture-resistant", "3-season", "durable", "family-camping", "versatile"],
+    "use_case_pool": ["wet-climate backpacking", "family car camping", "budget backpacking", "scout and youth camping", "kayak camping where gear gets damp"],
+    "unsplash_query": "sleeping bag tent camping"
+  },
+  {
+    "archetype": "sleeping_pad",
+    "category": "sleeping",
+    "subcategory": "sleeping_pads",
+    "brands": ["Therm-a-Rest", "NEMO", "Sea to Summit", "REI Co-op", "Klymit", "Big Agnes"],
+    "name_patterns": [
+      "{brand} {series} Sleeping Pad",
+      "{brand} {series} {pad_type} Pad",
+      "{brand} {series} Insulated Sleeping Pad"
+    ],
+    "series_names": ["Strato", "Cumulus", "Drift", "Comfort", "Basecamp", "Alpine", "Nimbus", "Vertex"],
+    "price_range": [39, 229],
+    "description_template": "The {name} is a {pad_type} sleeping pad with an R-value of {r_value}, providing {insulation_level} insulation for {use_case}. At {weight} lbs and {thickness} inches thick, it balances comfort and packability. Dimensions of {length}x{width} inches fit {size_fit}. {inflation_detail} {extra_detail}",
+    "extra_details": [
+      "Textured surface prevents your sleeping bag from sliding off during the night.",
+      "Tapered shape shaves ounces for weight-conscious backpackers.",
+      "Includes a repair kit with adhesive patches for field fixes.",
+      "Horizontal baffles cradle your body and reduce pressure points.",
+      "Compatible with the brand's pump sack for quick, breath-free inflation.",
+      "Packs down to the size of a 1-liter water bottle."
+    ],
+    "inflation_details": [
+      "Self-inflating foam core requires just a few breaths to top off.",
+      "Hand pump integrated into the stuff sack inflates the pad in under a minute.",
+      "Manual inflation via the twist valve takes approximately 10-15 breaths."
+    ],
+    "attribute_ranges": {
+      "weight_lbs": [0.7, 2.8],
+      "r_value": [1.3, 6.5],
+      "thickness_in": [1.5, 4.0],
+      "length_in": [72, 78],
+      "width_in": [20, 25],
+      "pad_type": ["inflatable", "self-inflating", "closed-cell foam"],
+      "insulation_level": ["minimal", "moderate", "high", "extreme cold"],
+      "size_fit": ["standard/regular sleepers", "regular to tall sleepers", "wide and tall sleepers"]
+    },
+    "tag_pool": ["ultralight", "insulated", "compact", "self-inflating", "inflatable", "foam", "3-season", "4-season", "side-sleeper-friendly", "warm"],
+    "use_case_pool": ["3-season backpacking", "winter camping on snow", "car camping comfort", "ultralight thru-hiking", "cold-ground insulation"],
+    "unsplash_query": "sleeping pad camping outdoor"
+  },
+  {
+    "archetype": "hiking_boot",
+    "category": "footwear",
+    "subcategory": "hiking_boots",
+    "brands": ["Salomon", "Merrell", "Lowa", "Vasque", "Danner", "Keen", "Scarpa"],
+    "name_patterns": [
+      "{brand} {series} Hiking Boot",
+      "{brand} {series} Waterproof Boot",
+      "{brand} {series} Mid Hiking Boot"
+    ],
+    "series_names": ["Trailblazer", "Summit", "Ridgewalk", "Granite", "Pathfinder", "Outbound", "Crestline", "Hawkridge", "Sequoia"],
+    "price_range": [109, 279],
+    "description_template": "The {name} is a {boot_height} hiking boot built on a {upper_material} upper with {waterproof_type} waterproof protection. The {outsole_type} outsole provides {lug_depth}mm lug depth for reliable traction on {terrain_type} terrain. A {midsole_type} midsole delivers {cushion_level} cushioning with {weight} oz total weight per pair. {width_detail} {extra_detail}",
+    "extra_details": [
+      "Padded collar and tongue reduce pressure points during long descents.",
+      "Heel brake geometry improves control on steep downhill sections.",
+      "Gusseted tongue keeps trail debris out of the boot interior.",
+      "TPU heel counter provides stability on uneven surfaces without adding bulk.",
+      "Nylon shank bridges the arch for support on rocky terrain without being overly stiff.",
+      "OrthoLite footbed provides long-lasting antimicrobial cushioning."
+    ],
+    "width_details": [
+      "Available in standard and wide widths.",
+      "Roomy toe box accommodates foot swelling on long hiking days.",
+      "Standard D-width fit with a secure heel cup."
+    ],
+    "attribute_ranges": {
+      "weight_oz_pair": [28, 48],
+      "boot_height": ["mid-cut", "high-cut"],
+      "upper_material": ["full-grain leather", "nubuck leather", "synthetic mesh and leather", "split-grain leather"],
+      "waterproof_type": ["Gore-Tex", "eVent", "brand-proprietary membrane", "DWR-treated"],
+      "outsole_type": ["Vibram Megagrip", "Vibram TC5+", "Contagrip MA", "proprietary rubber"],
+      "lug_depth_mm": [3, 6],
+      "midsole_type": ["EVA", "PU", "dual-density EVA", "compressed EVA"],
+      "cushion_level": ["moderate", "firm and supportive", "plush"],
+      "terrain_type": ["rocky mountain", "muddy forest", "mixed trail", "desert and slickrock"]
+    },
+    "tag_pool": ["waterproof", "mid-cut", "high-cut", "leather", "ankle-support", "vibram", "wide-available", "durable", "rugged", "day-hiking", "backpacking"],
+    "use_case_pool": ["day hiking on maintained trails", "multi-day backpacking with a heavy pack", "rocky mountain scrambles", "muddy Pacific Northwest trails", "all-season trail hiking"],
+    "unsplash_query": "hiking boots trail"
+  },
+  {
+    "archetype": "trail_runner",
+    "category": "footwear",
+    "subcategory": "trail_runners",
+    "brands": ["Salomon", "Hoka", "Brooks", "Altra", "La Sportiva", "Saucony", "Merrell"],
+    "name_patterns": [
+      "{brand} {series} Trail Running Shoe",
+      "{brand} {series} Trail Runner",
+      "{brand} {series} Off-Road Running Shoe"
+    ],
+    "series_names": ["Speedline", "Vortex", "Cascade", "Raptor", "FlowTrail", "Tempo", "Switchback", "Pulse"],
+    "price_range": [89, 179],
+    "description_template": "The {name} is a {weight}-ounce trail running shoe with a {drop}mm heel-to-toe drop and {stack_height}mm stack height. Features a {upper_type} upper for {breathability_level} breathability and a {outsole_type} outsole with {lug_depth}mm lugs for grip on {terrain_type} surfaces. The {cushion_type} midsole provides {cushion_feel}. {extra_detail}",
+    "extra_details": [
+      "Rock plate in the forefoot protects against sharp stones and roots.",
+      "Quicklace system allows one-pull tightening with no knots to come undone.",
+      "Gaiter attachment points compatible with trail running gaiters for debris protection.",
+      "Drainage ports in the midsole shed water after creek crossings.",
+      "Reinforced toe cap guards against rock and root strikes.",
+      "Ortholite insole provides long-run cushioning and moisture wicking."
+    ],
+    "attribute_ranges": {
+      "weight_oz": [7, 13],
+      "drop_mm": [0, 10],
+      "stack_height_mm": [18, 33],
+      "upper_type": ["engineered mesh", "ripstop mesh", "knit", "synthetic overlay mesh"],
+      "breathability_level": ["high", "moderate", "maximum"],
+      "outsole_type": ["Vibram Megagrip", "Contagrip MA", "TrailClaw", "proprietary sticky rubber"],
+      "lug_depth_mm": [2, 6],
+      "cushion_type": ["EVA", "compressed EVA", "nitrogen-infused foam", "dual-layer foam"],
+      "cushion_feel": ["responsive and firm ground feel", "plush and cushioned ride", "balanced cushion with good ground feedback"],
+      "terrain_type": ["dry rocky", "wet and muddy", "mixed trail", "technical mountain"]
+    },
+    "tag_pool": ["lightweight", "trail-running", "zero-drop", "cushioned", "rock-plate", "breathable", "fast", "grippy", "race-ready", "wide-toe-box"],
+    "use_case_pool": ["technical trail running", "ultramarathon and long-distance trail races", "fast day hiking", "mixed road and trail running", "mountain running on rocky terrain"],
+    "unsplash_query": "trail running shoes"
+  },
+  {
+    "archetype": "camp_shoe",
+    "category": "footwear",
+    "subcategory": "camp_shoes",
+    "brands": ["Teva", "Chaco", "Keen", "Crocs", "Xero Shoes", "Bedrock"],
+    "name_patterns": [
+      "{brand} {series} Camp Sandal",
+      "{brand} {series} Slide",
+      "{brand} {series} Camp Shoe"
+    ],
+    "series_names": ["Basecamp", "Fireside", "Trailside", "Ease", "Drift", "Lounge", "Summit Slide"],
+    "price_range": [29, 89],
+    "description_template": "The {name} is a {weight}-ounce {shoe_type} designed for wearing around camp after a long day on the trail. Features a {sole_type} sole with {footbed_type} footbed for {comfort_level} comfort. {closure_type} closure. Made from {material} for easy cleaning and quick drying. {extra_detail}",
+    "extra_details": [
+      "Antimicrobial treatment keeps odors in check after sweaty hiking days.",
+      "Packable design compresses flat and clips to the outside of your backpack.",
+      "Toe protection prevents stubbing on rocks and roots around camp.",
+      "Adjustable straps accommodate swollen feet after a long hike.",
+      "Water-friendly construction makes them perfect for river crossings and camp showers.",
+      "Lightweight enough to justify carrying as a second pair on multi-day trips."
+    ],
+    "attribute_ranges": {
+      "weight_oz": [5, 16],
+      "shoe_type": ["sandal", "slide", "clog", "closed-toe water shoe"],
+      "sole_type": ["rubber", "EVA foam", "Vibram rubber"],
+      "footbed_type": ["contoured arch-support", "flat and flexible", "cushioned foam"],
+      "comfort_level": ["all-day", "moderate", "plush recovery"],
+      "closure_type": ["Velcro strap", "slip-on", "adjustable webbing", "buckle"],
+      "material": ["synthetic webbing", "EVA foam", "recycled polyester", "quick-dry nylon"]
+    },
+    "tag_pool": ["camp-shoe", "sandal", "recovery", "packable", "water-friendly", "lightweight", "slip-on", "post-hike", "travel"],
+    "use_case_pool": ["post-hike recovery at camp", "water crossings and camp showers", "lightweight travel shoe", "casual trail town wear", "packable second shoe for backpacking"],
+    "unsplash_query": "outdoor sandals hiking"
+  },
+  {
+    "archetype": "rain_jacket",
+    "category": "apparel",
+    "subcategory": "rain_jackets",
+    "brands": ["Arc'teryx", "Patagonia", "The North Face", "Outdoor Research", "REI Co-op", "Marmot", "Black Diamond"],
+    "name_patterns": [
+      "{brand} {series} Rain Jacket",
+      "{brand} {series} Waterproof Shell",
+      "{brand} {series} Rain Shell"
+    ],
+    "series_names": ["Stormfront", "Downpour", "Tempest", "Nimbus", "Cloudbreak", "Torrent", "Monsoon", "Cascade"],
+    "price_range": [79, 349],
+    "description_template": "The {name} is a {weight}-ounce {layer_count}-layer waterproof rain jacket made with {membrane_type} membrane technology. Rated at {waterproof_rating}mm waterproofing and {breathability}g/m²/24hr breathability. Features {hood_type} hood, {pocket_count} zippered pockets, and {hem_type} hem adjustment. Packs into its own pocket for {packed_size} packed size. {extra_detail}",
+    "extra_details": [
+      "Fully taped seams prevent water intrusion at every stitch point.",
+      "Pit zips provide dump ventilation during high-output activities.",
+      "Helmet-compatible hood adjusts in three dimensions for a custom fit.",
+      "DWR finish causes rain to bead and roll off the face fabric.",
+      "Laminated visor on the hood channels water away from your face.",
+      "Articulated sleeves allow full range of motion for climbing and scrambling."
+    ],
+    "attribute_ranges": {
+      "weight_oz": [5, 16],
+      "layer_count": ["2", "2.5", "3"],
+      "membrane_type": ["Gore-Tex", "Gore-Tex Paclite", "eVent", "Pertex Shield", "H2No", "proprietary"],
+      "waterproof_rating_mm": [10000, 28000],
+      "breathability_g": [10000, 25000],
+      "hood_type": ["helmet-compatible", "roll-away stowable", "fixed adjustable"],
+      "pocket_count": [2, 3],
+      "hem_type": ["drawcord", "elastic", "dual-adjust drawcord"],
+      "packed_size": ["fist-sized", "softball-sized", "water bottle-sized"]
+    },
+    "tag_pool": ["waterproof", "breathable", "gore-tex", "packable", "lightweight", "3-layer", "pit-zips", "windproof", "hiking", "backpacking", "rain-shell"],
+    "use_case_pool": ["rainy day hiking", "alpine climbing in variable weather", "year-round trail use", "ultralight backpacking rain protection", "travel and commuting in wet climates"],
+    "unsplash_query": "rain jacket hiking outdoors"
+  },
+  {
+    "archetype": "insulated_jacket",
+    "category": "apparel",
+    "subcategory": "insulated_jackets",
+    "brands": ["Patagonia", "Arc'teryx", "The North Face", "Rab", "Mountain Hardwear", "REI Co-op"],
+    "name_patterns": [
+      "{brand} {series} Insulated Jacket",
+      "{brand} {series} Down Jacket",
+      "{brand} {series} Puffy Jacket"
+    ],
+    "series_names": ["Ember", "Frostline", "Solaris", "Igloo", "Tundra", "Heatwave", "Zero", "Glacier"],
+    "price_range": [99, 399],
+    "description_template": "The {name} is a {weight}-ounce insulated jacket filled with {insulation_type} providing warmth in temperatures down to {comfort_temp}°F. Features a {shell_material} shell with {baffle_style} baffles, {collar_type} collar, and {pocket_count} hand pockets. Packs into its own pocket to roughly {packed_size}. {extra_detail}",
+    "extra_details": [
+      "Elastic cuffs and hem seal in warmth without the bulk of drawcords.",
+      "Interior dump pocket doubles as a stuff sack for packability.",
+      "DWR-treated shell sheds light moisture and snow.",
+      "Chin guard behind the zipper prevents cold zipper contact on skin.",
+      "Two-way zipper for venting while seated or wearing a harness.",
+      "Works as a standalone layer or as a midlayer under a shell in extreme cold."
+    ],
+    "attribute_ranges": {
+      "weight_oz": [8, 22],
+      "insulation_type": ["800-fill goose down", "700-fill duck down", "650-fill down", "PrimaLoft Gold", "Climashield APEX", "Coreloft synthetic"],
+      "comfort_temp_f": [-10, 35],
+      "shell_material": ["20D ripstop nylon", "10D nylon", "Pertex Quantum", "30D polyester"],
+      "baffle_style": ["sewn-through", "box baffle", "welded"],
+      "collar_type": ["insulated stand-up", "down-filled hood", "standard"],
+      "pocket_count": [2, 3],
+      "packed_size": ["softball-sized", "quart-bag-sized", "Nalgene-bottle-sized"]
+    },
+    "tag_pool": ["down", "synthetic-insulated", "puffy", "packable", "lightweight", "cold-weather", "midlayer", "winter", "warm", "compressible"],
+    "use_case_pool": ["cold-weather layering", "belaying and rest stops in cold temps", "winter day hiking", "cold camp evenings", "travel in cold climates", "everyday cold-weather wear"],
+    "unsplash_query": "insulated jacket outdoors winter"
+  },
+  {
+    "archetype": "base_layer",
+    "category": "apparel",
+    "subcategory": "base_layers",
+    "brands": ["Smartwool", "Icebreaker", "Patagonia", "REI Co-op", "Ridge Merino", "Minus33"],
+    "name_patterns": [
+      "{brand} {series} {weight_class} Base Layer Top",
+      "{brand} {series} Merino {weight_class} Crew",
+      "{brand} {series} {weight_class} Long Sleeve"
+    ],
+    "series_names": ["Core", "Everyday", "Summit", "Alpine", "Trail", "Expedition", "Comfort", "Active"],
+    "price_range": [49, 139],
+    "description_template": "The {name} is a {weight_class}-weight base layer made from {fabric_type} for {primary_benefit}. Weighing {weight} oz with a {fit_type} fit and {seam_type} seams for comfort under a pack or harness. {fabric_weight}gsm fabric provides {warmth_level} warmth. {extra_detail}",
+    "extra_details": [
+      "Merino wool naturally resists odor, so you can wear it multiple days on a backpacking trip.",
+      "Flatlock seams prevent chafing during high-output activities.",
+      "Thumbhole cuffs keep sleeves in place when layering.",
+      "Raglan sleeve construction improves mobility for climbing and skiing.",
+      "Drop-tail hem stays tucked in during active movement.",
+      "UPF 30+ sun protection for exposed alpine environments."
+    ],
+    "attribute_ranges": {
+      "weight_oz": [4, 9],
+      "weight_class": ["lightweight", "midweight", "heavyweight"],
+      "fabric_type": ["100% merino wool", "merino-synthetic blend", "merino-Tencel blend", "150gsm merino"],
+      "primary_benefit": ["next-to-skin moisture management", "all-day comfort and odor resistance", "cold-weather insulation and wicking"],
+      "fit_type": ["slim", "regular", "relaxed"],
+      "seam_type": ["flatlock", "offset", "bonded"],
+      "fabric_weight_gsm": [120, 320],
+      "warmth_level": ["light and breathable", "moderate all-around", "maximum cold-weather"]
+    },
+    "tag_pool": ["merino", "base-layer", "moisture-wicking", "odor-resistant", "4-season", "layering", "wool", "breathable", "next-to-skin", "thermoregulating"],
+    "use_case_pool": ["active hiking and backpacking", "cold-weather layering system", "ski and snowboard base layer", "everyday cold-weather wear", "multi-day backpacking without laundry access"],
+    "unsplash_query": "merino wool base layer hiking"
+  },
+  {
+    "archetype": "hiking_pants",
+    "category": "apparel",
+    "subcategory": "hiking_pants",
+    "brands": ["prAna", "Kuhl", "Arc'teryx", "Outdoor Research", "REI Co-op", "Columbia", "Fjallraven"],
+    "name_patterns": [
+      "{brand} {series} Hiking Pants",
+      "{brand} {series} Trail Pants",
+      "{brand} {series} Stretch Hiking Pants"
+    ],
+    "series_names": ["Traverse", "Ridgeway", "Westbound", "Alpine", "Summit", "Flex", "Rover", "Trailhead"],
+    "price_range": [49, 149],
+    "description_template": "The {name} is a {weight}-ounce pair of hiking pants made from {fabric_type} with {stretch_type} stretch for unrestricted movement on the trail. Features {pocket_count} pockets including {pocket_detail}, {waist_type} waistband, and {sun_protection} sun protection. {inseam} inseam. {extra_detail}",
+    "extra_details": [
+      "Articulated knees allow full range of motion for scrambling and high-stepping.",
+      "DWR finish repels light rain and resists trail grime.",
+      "Convertible zip-off legs convert pants to shorts in seconds.",
+      "Gusseted crotch eliminates binding during high-step moves.",
+      "Roll-up leg snaps let you convert to a capri length for water crossings.",
+      "Built-in belt eliminates the need for a separate belt and reduces pack weight."
+    ],
+    "attribute_ranges": {
+      "weight_oz": [8, 16],
+      "fabric_type": ["nylon-spandex blend", "recycled nylon with stretch", "softshell", "ripstop nylon", "organic cotton-nylon blend"],
+      "stretch_type": ["4-way", "2-way", "mechanical"],
+      "pocket_count": [4, 7],
+      "pocket_detail": ["zippered thigh pocket", "cargo pockets", "zippered hand and back pockets"],
+      "waist_type": ["integrated belt", "snap with belt loops", "elastic with drawcord"],
+      "sun_protection": ["UPF 50+", "UPF 40+", "UPF 30+"],
+      "inseam": ["30 in", "32 in", "34 in"]
+    },
+    "tag_pool": ["stretch", "quick-dry", "UPF-rated", "convertible", "DWR", "lightweight", "durable", "hiking", "travel", "articulated-knees"],
+    "use_case_pool": ["day hiking and trail walking", "multi-day backpacking", "travel pants that transition from trail to town", "rock scrambling and off-trail bushwhacking", "warm-weather hiking"],
+    "unsplash_query": "hiking pants outdoor trail"
+  },
+  {
+    "archetype": "backpacking_pack",
+    "category": "packs",
+    "subcategory": "backpacking_packs",
+    "brands": ["Osprey", "Gregory", "Deuter", "REI Co-op", "Granite Gear", "ULA", "Gossamer Gear"],
+    "name_patterns": [
+      "{brand} {series} {volume}L Backpacking Pack",
+      "{brand} {series} {volume} Liter Pack",
+      "{brand} {series} {volume}L Backpack"
+    ],
+    "series_names": ["Traverse", "Ridgeline", "Summit", "Waypoint", "Venture", "Meridian", "Expedition", "Ascent"],
+    "price_range": [149, 399],
+    "description_template": "The {name} is a {volume}-liter backpacking pack weighing {weight} lbs, designed for {load_range}-pound loads. Built with a {frame_type} frame and {hipbelt_type} hipbelt that transfers {load_transfer}% of the load to your hips. Features a {access_type} main compartment access, {pocket_count} external pockets, and {hydration_detail}. Torso adjustable from {torso_range}. {extra_detail}",
+    "extra_details": [
+      "Floating top lid converts into a summit daypack for peak-bagging side trips.",
+      "Sleeping bag compartment with a zippered divider keeps your bag accessible from the bottom.",
+      "Trekking pole and ice axe attachment loops keep tools secure and accessible.",
+      "Side compression straps stabilize partial loads and lash down extra gear.",
+      "Stretch mesh front panel stashes wet layers or a tent footprint for quick access.",
+      "Load lifter straps fine-tune the carry for uphill and downhill sections."
+    ],
+    "attribute_ranges": {
+      "volume_L": [40, 75],
+      "weight_lbs": [2.5, 5.5],
+      "load_range_lbs": ["25-40", "30-50", "35-55", "40-60"],
+      "frame_type": ["internal aluminum", "internal composite", "frameless ultralight", "peripheral wire frame"],
+      "hipbelt_type": ["padded and contoured", "ultralight webbing", "thermoformed", "removable padded"],
+      "load_transfer_pct": [75, 90],
+      "access_type": ["top-loading", "front-panel zip", "top-loading with bottom zip"],
+      "pocket_count": [5, 9],
+      "hydration_detail": ["hydration sleeve fits up to 3L reservoir", "internal hydration sleeve with hose port", "compatible with hydration bladders up to 3 liters"],
+      "torso_range": ["15-19 in", "16-21 in", "adjustable 15-22 in"]
+    },
+    "tag_pool": ["backpacking", "multi-day", "ultralight", "internal-frame", "rain-cover-included", "load-bearing", "ventilated-back", "hip-belt", "top-loading", "hydration-compatible"],
+    "use_case_pool": ["multi-day backpacking trips", "thru-hiking the AT, PCT, or CDT", "weekend overnighters", "international trekking", "winter backpacking with bulky gear"],
+    "unsplash_query": "backpacking backpack hiking"
+  },
+  {
+    "archetype": "daypack",
+    "category": "packs",
+    "subcategory": "daypacks",
+    "brands": ["Osprey", "REI Co-op", "Deuter", "CamelBak", "Patagonia", "Black Diamond"],
+    "name_patterns": [
+      "{brand} {series} {volume}L Daypack",
+      "{brand} {series} {volume} Liter Day Hiking Pack",
+      "{brand} {series} {volume}L Day Pack"
+    ],
+    "series_names": ["Flash", "Trailmix", "Skyline", "Ridgehike", "Dash", "Scout", "Ranger", "Sprint"],
+    "price_range": [49, 159],
+    "description_template": "The {name} is a {volume}-liter daypack weighing just {weight} oz, built for {use_case}. Features {suspension_type} suspension with {back_panel_type} back panel for ventilation. Includes {pocket_count} pockets, {hydration_detail}, and {attachment_points} external attachment points. {extra_detail}",
+    "extra_details": [
+      "Stretch side pockets fit most water bottles for on-the-go hydration.",
+      "Breathable mesh back panel creates airspace between your back and the pack.",
+      "Integrated rain cover stows in a bottom pocket and deploys in seconds.",
+      "Trekking pole carry system attaches poles for hands-free scrambling.",
+      "Internal key clip and organizer pocket keep small items from getting lost.",
+      "Reflective accents improve visibility on early morning or late evening hikes."
+    ],
+    "attribute_ranges": {
+      "volume_L": [15, 35],
+      "weight_oz": [12, 32],
+      "suspension_type": ["simple webbing", "padded mesh", "wire frame tensioned"],
+      "back_panel_type": ["mesh-covered foam", "suspended mesh trampoline", "channeled foam"],
+      "pocket_count": [3, 7],
+      "hydration_detail": ["hydration sleeve fits 2L reservoir", "compatible with hydration bladders", "includes 1.5L reservoir"],
+      "attachment_points": [2, 6]
+    },
+    "tag_pool": ["daypack", "lightweight", "day-hiking", "hydration-compatible", "rain-cover", "breathable", "compact", "commuter", "travel"],
+    "use_case_pool": ["day hikes on maintained trails", "peak bagging and scrambles", "daily commuting and travel", "fast and light trail running approaches", "short overnight trips with minimal gear"],
+    "unsplash_query": "daypack hiking trail"
+  },
+  {
+    "archetype": "camp_stove",
+    "category": "camp_kitchen",
+    "subcategory": "stoves",
+    "brands": ["Jetboil", "MSR", "Snow Peak", "Soto", "BioLite", "Camp Chef", "Primus"],
+    "name_patterns": [
+      "{brand} {series} Camp Stove",
+      "{brand} {series} Backpacking Stove",
+      "{brand} {series} {stove_type} Stove"
+    ],
+    "series_names": ["Flash", "Ignite", "Alpine", "Basecamp", "Summit", "Trail", "Pocket", "Rapid"],
+    "price_range": [29, 199],
+    "description_template": "The {name} is a {stove_type} camp stove weighing {weight} oz with a {boil_time}-minute boil time for 1 liter of water. Fuel type: {fuel_type}. Features {ignition_type} ignition, {flame_control} flame control, and {pot_support_type} pot supports. {wind_detail} {extra_detail}",
+    "extra_details": [
+      "Integrated pot system nests together for a compact, all-in-one carry.",
+      "Piezo ignition eliminates the need for matches or a lighter.",
+      "Simmer control allows precise heat adjustment for cooking real meals, not just boiling water.",
+      "Folding legs and pot supports stow inside the stove body for minimal packed size.",
+      "Compatible with standard 8-oz isobutane-propane canister (sold separately).",
+      "Includes a windscreen that clips around the burner for improved performance in breezy conditions."
+    ],
+    "wind_details": [
+      "Built-in wind guard surrounds the burner for reliable performance in exposed conditions.",
+      "Recessed burner design provides natural wind protection without a separate screen.",
+      "Includes a detachable windscreen for use above treeline and on ridgelines."
+    ],
+    "attribute_ranges": {
+      "weight_oz": [3, 24],
+      "stove_type": ["canister", "integrated canister system", "liquid fuel", "wood-burning"],
+      "boil_time_min": [2, 6],
+      "fuel_type": ["isobutane-propane canister", "white gas / multi-fuel", "wood / biomass", "butane canister"],
+      "ignition_type": ["piezo", "manual (lighter required)", "push-button piezo"],
+      "flame_control": ["basic high/low", "precision simmer", "full-range adjustable"],
+      "pot_support_type": ["integrated pot", "folding wire", "stamped steel", "cross-arm"]
+    },
+    "tag_pool": ["ultralight", "fast-boil", "canister", "backpacking", "integrated-system", "simmer-capable", "piezo-ignition", "compact", "wood-burning", "car-camping"],
+    "use_case_pool": ["ultralight solo backpacking", "group camp cooking", "boil-only meals on the trail", "car camping kitchen setups", "winter mountaineering where reliable fuel matters"],
+    "unsplash_query": "camp stove cooking outdoors"
+  },
+  {
+    "archetype": "cookset",
+    "category": "camp_kitchen",
+    "subcategory": "cooksets",
+    "brands": ["MSR", "GSI Outdoors", "Stanley", "Snow Peak", "Sea to Summit", "Primus"],
+    "name_patterns": [
+      "{brand} {series} {person_count}-Person Cookset",
+      "{brand} {series} Camp Cookware Set",
+      "{brand} {series} Nesting Cookset"
+    ],
+    "series_names": ["Pinnacle", "Trail", "Basecamp", "Alpine", "Frontier", "Halulite", "Summit"],
+    "price_range": [24, 129],
+    "description_template": "The {name} is a {person_count}-person cookset made from {material} weighing {weight} oz total. Includes {piece_count} pieces: {pieces_detail}. {coating_detail} All pieces nest together for a packed size of {packed_size}. {extra_detail}",
+    "extra_details": [
+      "Folding handles lock in place for cooking and fold flat for nesting.",
+      "Mesh stuff sack included for organized storage and drying.",
+      "Measurement markings molded into pot interior for trailside recipe accuracy.",
+      "Lid doubles as a strainer with built-in drain holes.",
+      "Compatible with most canister stove pot support diameters.",
+      "BPA-free plates and bowls are dishwasher safe for easy cleaning at home."
+    ],
+    "attribute_ranges": {
+      "weight_oz": [8, 36],
+      "person_count": [1, 4],
+      "material": ["hard-anodized aluminum", "titanium", "stainless steel", "non-stick aluminum"],
+      "piece_count": [3, 8],
+      "pieces_detail": ["1L pot, 2L pot, frypan, and lid", "1L pot, lid-bowl, and spork", "1.5L pot, 750mL pot, frypan, 2 plates, and 2 mugs", "0.9L titanium pot and lid"],
+      "coating_detail": ["Non-stick coating for easy cleanup and low-oil cooking.", "Uncoated surface is more durable and better for campfire use.", "Ceramic non-stick coating is PFOA-free and easy to clean."],
+      "packed_size": ["5x5 in", "6x6 in", "7x7 in", "4x4 in"]
+    },
+    "tag_pool": ["nesting", "lightweight", "titanium", "non-stick", "hard-anodized", "backpacking", "car-camping", "compact", "BPA-free", "group-cooking"],
+    "use_case_pool": ["solo ultralight backpacking", "group camping meals", "car camping kitchen setups", "international travel cooking", "bikepacking with limited space"],
+    "unsplash_query": "camping cookware outdoors"
+  },
+  {
+    "archetype": "water_filter",
+    "category": "camp_kitchen",
+    "subcategory": "water_filters",
+    "brands": ["Sawyer", "Platypus", "Katadyn", "MSR", "Grayl", "LifeStraw", "HydroBlu"],
+    "name_patterns": [
+      "{brand} {series} Water Filter",
+      "{brand} {series} Water Purifier",
+      "{brand} {series} Filtration System"
+    ],
+    "series_names": ["Clearwater", "TrailShot", "Guardian", "Flow", "GeoPress", "Rapids", "Summit"],
+    "price_range": [19, 149],
+    "description_template": "The {name} is a {filter_type} water treatment system weighing {weight} oz with a {flow_rate} liter-per-minute flow rate. Removes {removes} using a {pore_size}-micron filter element. Filter lifespan of {lifespan}. {method_detail} {extra_detail}",
+    "extra_details": [
+      "Backflush syringe included for field cleaning and maintaining flow rate.",
+      "Threaded connection fits standard water bottle mouths for inline use.",
+      "Activated carbon element improves taste by reducing chemical contaminants.",
+      "Press-and-drink design filters water in under 15 seconds — no waiting, no squeezing.",
+      "Gravity-fed operation is ideal for filtering water for a group at camp.",
+      "Fits in a pants pocket for quick access at stream crossings."
+    ],
+    "method_details": [
+      "Squeeze-style operation: fill the pouch, screw on the filter, and squeeze clean water into your bottle.",
+      "Gravity-fed system hangs from a tree and filters water hands-free while you set up camp.",
+      "Pump-style operation draws water from the source through a hose and filters into your container.",
+      "Press-style: fill the bottle, press the filter down, and drink directly."
+    ],
+    "attribute_ranges": {
+      "weight_oz": [2, 18],
+      "filter_type": ["squeeze", "gravity", "pump", "bottle press", "straw"],
+      "flow_rate_lpm": [0.5, 4.0],
+      "removes": ["bacteria and protozoa", "bacteria, protozoa, and particulate", "bacteria, protozoa, viruses, and chemicals", "bacteria and protozoa with activated carbon for taste"],
+      "pore_size_micron": [0.02, 0.2],
+      "lifespan": ["100,000 gallons", "1,000 liters", "300 uses", "2,000 liters", "up to 500,000 gallons"]
+    },
+    "tag_pool": ["water-filter", "purifier", "squeeze", "gravity", "ultralight", "backpacking", "group", "fast-flow", "long-lasting", "BPA-free"],
+    "use_case_pool": ["solo ultralight backpacking", "group camping water for the whole camp", "international travel to areas with questionable water", "day hiking without carrying all your water", "emergency preparedness kits"],
+    "unsplash_query": "water filter hiking outdoors"
+  },
+  {
+    "archetype": "headlamp",
+    "category": "accessories",
+    "subcategory": "headlamps",
+    "brands": ["Black Diamond", "Petzl", "BioLite", "Nitecore", "Princeton Tec", "Olight"],
+    "name_patterns": [
+      "{brand} {series} Headlamp",
+      "{brand} {series} {max_lumens}-Lumen Headlamp",
+      "{brand} {series} Rechargeable Headlamp"
+    ],
+    "series_names": ["Spark", "Beam", "Trailbeam", "Summit", "Nighthawk", "Luna", "Glow", "Signal"],
+    "price_range": [19, 89],
+    "description_template": "The {name} is a {max_lumens}-lumen headlamp weighing {weight} oz with {mode_count} lighting modes including {modes}. {power_type} with a {max_runtime}-hour max runtime on low. {beam_type} beam throws light up to {beam_distance} meters. IPX{waterproof_rating} water resistance. {extra_detail}",
+    "extra_details": [
+      "Red night-vision mode preserves dark adaptation for stargazing and nighttime navigation.",
+      "USB-C rechargeable battery eliminates the need to carry spare batteries on multi-day trips.",
+      "Lock mode prevents accidental activation in your pack and saves battery life.",
+      "Tilt adjustment lets you angle the beam for close-up tasks or long-range trail viewing.",
+      "Memory function returns to your last-used brightness level when powered on.",
+      "Low-battery indicator gives you advance warning before the light dies."
+    ],
+    "attribute_ranges": {
+      "max_lumens": [100, 500],
+      "weight_oz": [1.5, 4],
+      "mode_count": [3, 6],
+      "modes": ["low, medium, high", "low, medium, high, strobe", "low, medium, high, red, strobe", "spot, flood, combo, red"],
+      "power_type": ["USB-C rechargeable", "3x AAA batteries", "rechargeable lithium-ion", "hybrid rechargeable + AAA"],
+      "max_runtime_hrs": [40, 200],
+      "beam_type": ["dual spot/flood", "single spot", "wide flood", "adjustable focus"],
+      "beam_distance_m": [40, 120],
+      "waterproof_rating": [4, 7]
+    },
+    "tag_pool": ["rechargeable", "lightweight", "red-light", "waterproof", "USB-C", "bright", "hiking", "backpacking", "running", "camp-light"],
+    "use_case_pool": ["nighttime trail hiking and backpacking", "early morning trail running", "camp cooking and reading after dark", "night hiking and predawn summit pushes", "emergency preparedness"],
+    "unsplash_query": "headlamp hiking night"
+  },
+  {
+    "archetype": "trekking_poles",
+    "category": "accessories",
+    "subcategory": "trekking_poles",
+    "brands": ["Black Diamond", "Leki", "REI Co-op", "Gossamer Gear", "Cascade Mountain Tech", "Komperdell"],
+    "name_patterns": [
+      "{brand} {series} Trekking Poles",
+      "{brand} {series} Adjustable Trekking Poles",
+      "{brand} {series} {material} Poles"
+    ],
+    "series_names": ["Trail", "Summit", "Ridgeline", "Distance", "Ascent", "Alpine", "Traverse", "Pathfinder"],
+    "price_range": [29, 179],
+    "description_template": "The {name} are {material} trekking poles weighing {weight} oz per pair. {adjustment_type} adjustment from {min_length} to {max_length} cm. Features {grip_material} grips with {strap_type} wrist straps and {basket_type} baskets. {tip_type} tips provide traction on {terrain_type}. {extra_detail}",
+    "extra_details": [
+      "Three-section collapsible design packs down small enough to strap to the side of a daypack.",
+      "Z-fold design deploys in seconds and packs to just 15 inches collapsed.",
+      "Interchangeable baskets let you swap between small summer tips and large snow baskets.",
+      "Extended foam grip below the handle allows for quick choke-up on traverse sections.",
+      "Ergonomic 15° angled grip reduces wrist fatigue on long approaches.",
+      "Flick-lock adjustment mechanism is easy to operate with gloves on."
+    ],
+    "attribute_ranges": {
+      "weight_oz_pair": [9, 22],
+      "material": ["carbon fiber", "aluminum 7075", "aluminum 6061", "carbon-aluminum hybrid"],
+      "adjustment_type": ["telescoping lever-lock", "telescoping twist-lock", "Z-fold fixed-length", "telescoping flick-lock"],
+      "min_length_cm": [60, 65],
+      "max_length_cm": [125, 140],
+      "grip_material": ["cork", "foam", "rubber", "dual-density cork-foam"],
+      "strap_type": ["padded", "breathable mesh", "removable", "none"],
+      "basket_type": ["standard trail", "interchangeable trail/snow", "small carbide", "trekking"],
+      "tip_type": ["carbide", "steel", "tungsten carbide"],
+      "terrain_type": ["rocky mountain trails", "mixed terrain", "snow and ice", "all surfaces"]
+    },
+    "tag_pool": ["trekking-poles", "carbon-fiber", "aluminum", "ultralight", "collapsible", "adjustable", "cork-grip", "3-season", "4-season", "hiking"],
+    "use_case_pool": ["long day hikes with elevation gain", "multi-day backpacking for knee relief", "winter snowshoeing with snow baskets", "ultralight thru-hiking where every ounce counts", "stream crossings and stability on rough terrain"],
+    "unsplash_query": "trekking poles hiking mountains"
+  }
+]
