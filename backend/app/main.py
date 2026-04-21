@@ -4,6 +4,7 @@ from contextlib import asynccontextmanager
 
 from app.db.database import check_db_connection
 from app.api.products import router as products_router
+from app.api.search import router as search_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -28,3 +29,4 @@ async def health():
     return {"status": "ok"}
 
 app.include_router(products_router)
+app.include_router(search_router)

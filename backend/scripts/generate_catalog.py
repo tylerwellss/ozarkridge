@@ -32,6 +32,11 @@ def resolve_attr(value):
     return value
 
 
+def get_placeholder_image(category: str) -> str:
+    """Return a placeholder image URL for the given category."""
+    return f"https://placehold.co/400x400/e2e8f0/475569?text={category.replace('_', '+')}"
+
+
 def build_vars(archetype, attrs, brand, series, capacity, use_case, extra_detail, special):
     """Combine all resolved values into a single dict for str.format_map()."""
     vars_ = {}
@@ -94,7 +99,7 @@ def generate_products(archetype: dict, count: int) -> list[dict]:
             "description": description,
             "attributes": attrs,
             "tags": tags,
-            "unsplash_query": archetype["unsplash_query"],
+            "image_url": get_placeholder_image(archetype["category"]),
         })
 
     return products
@@ -117,14 +122,14 @@ async def main():
         await conn.executemany(
             """
             INSERT INTO products
-                (name, brand, category, subcategory, price, description, attributes, tags, unsplash_query)
+                (name, brand, category, subcategory, price, description, attributes, tags, image_url)
             VALUES ($1, $2, $3, $4, $5, $6, $7::jsonb, $8, $9)
             """,
             [
                 (
                     p["name"], p["brand"], p["category"], p["subcategory"],
                     p["price"], p["description"], json.dumps(p["attributes"]),
-                    p["tags"], p["unsplash_query"],
+                    p["tags"], p["image_url"],
                 )
                 for p in all_products
             ],
