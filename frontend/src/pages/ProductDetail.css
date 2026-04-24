@@ -111,7 +111,29 @@
   border: 1px solid #c7d7fd;
 }
 
-/* ─── description ─────────────────────────────────────────── */
+/* ─── add to cart button ─────────────────────────────────── */
+.detail-add-to-cart-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #2d6a4f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 1.75rem;
+  transition: background 0.2s;
+}
+.detail-add-to-cart-btn:hover {
+  background: #1b4332;
+}
+.detail-add-to-cart-btn.added {
+  background: #059669;
+}
+
+
 .detail-description-section {
   margin-bottom: 1.5rem;
 }

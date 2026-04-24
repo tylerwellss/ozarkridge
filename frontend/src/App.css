@@ -54,6 +54,43 @@
   color: #fff;
 }
 
+/* ── Cart button ─────────────────────────────────── */
+.nav-cart-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.nav-cart-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ef4444;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
 /* ── Main ───────────────────────────────────────── */
 .app-main {
   min-height: calc(100vh - 56px);

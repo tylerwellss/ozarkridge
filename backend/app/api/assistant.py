@@ -1,3 +1,5 @@
+import json
+import re
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import text
@@ -18,10 +20,20 @@ RETRIEVAL_TRIGGERS = [
     "other", "what else", "instead",
 ]
 
+CART_TRIGGERS = [
+    "add to cart", "add both", "add all", "add them", "add it to my cart",
+    "put in my cart", "put both in", "put them in", "add these to", "add those to",
+]
+
 
 def needs_retrieval(message: str) -> bool:
     message_lower = message.lower()
     return any(trigger in message_lower for trigger in RETRIEVAL_TRIGGERS)
+
+
+def wants_cart_add(message: str) -> bool:
+    message_lower = message.lower()
+    return any(trigger in message_lower for trigger in CART_TRIGGERS)
 
 
 class Message(BaseModel):
@@ -63,14 +75,15 @@ async def assistant(request: AssistantRequest, db: AsyncSession = Depends(get_db
                 f"Brand: {p['brand']}\n"
                 f"Price: ${float(p['price']):.2f}\n"
                 f"Category: {p['category']}\n"
+                f"URL: /products/{p['id']}\n"
                 f"Description: {p['description']}"
                 f"{attrs}"
                 f"{tags}\n"
             )
 
-    # Retrieve related products if message suggests cross-product intent
+    # Retrieve related products if message suggests cross-product intent or cart action
     retrieved_products_context = ""
-    if needs_retrieval(request.message):
+    if needs_retrieval(request.message) or wants_cart_add(request.message):
         retrieved = retrieve_products(request.message, top_k=5)
         product_ids = [r["product_id"] for r in retrieved if r["product_id"]]
         if product_ids:
@@ -81,7 +94,7 @@ async def assistant(request: AssistantRequest, db: AsyncSession = Depends(get_db
             )
             rows = result.mappings().all()
             lines = [
-                f"- {p['name']} by {p['brand']}, ${float(p['price']):.2f} — {p['description'][:200]}"
+                f"- {p['name']} by {p['brand']}, ${float(p['price']):.2f} (URL: /products/{p['id']}) — {p['description'][:200]}"
                 for p in [dict(r) for r in rows]
             ]
             retrieved_products_context = "\nRelated products from our catalog:\n" + "\n".join(lines) + "\n"
@@ -102,6 +115,28 @@ async def assistant(request: AssistantRequest, db: AsyncSession = Depends(get_db
             system=system_prompt,
             messages=messages,
         )
-        return {"response": response.content[0].text}
+        raw_text = response.content[0].text
     except Exception:
         raise HTTPException(status_code=503, detail="AI assistant is temporarily unavailable. Please try again.")
+
+    # Parse optional CART_ADD marker appended by the AI
+    add_to_cart_products = []
+    cart_marker = re.search(r'\nCART_ADD:(\[.*?\])\s*$', raw_text, re.DOTALL)
+    if cart_marker:
+        raw_text = raw_text[:cart_marker.start()].rstrip()
+        try:
+            cart_ids = json.loads(cart_marker.group(1))
+            if cart_ids:
+                placeholders = ", ".join([f":cid{i}" for i in range(len(cart_ids))])
+                cart_result = await db.execute(
+                    text(f"SELECT * FROM products WHERE id IN ({placeholders})"),
+                    {f"cid{i}": cid for i, cid in enumerate(cart_ids)},
+                )
+                for row in cart_result.mappings().all():
+                    p = dict(row)
+                    p["price"] = float(p["price"])
+                    add_to_cart_products.append(p)
+        except (json.JSONDecodeError, Exception):
+            pass
+
+    return {"response": raw_text, "add_to_cart": add_to_cart_products}

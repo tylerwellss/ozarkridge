@@ -1,14 +1,25 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 import './ProductCard.css'
 
 export function ProductCard({ product }) {
+  const { addToCart } = useCart()
+  const [added, setAdded] = useState(false)
+
   const imageUrl =
     product.image_url ||
     `https://placehold.co/400x400/e2e8f0/475569?text=${encodeURIComponent(product.category || 'product')}`
 
+  function handleAddToCart() {
+    addToCart(product)
+    setAdded(true)
+    setTimeout(() => setAdded(false), 1200)
+  }
+
   return (
-    <Link to={`/products/${product.id}`} className="product-card-link">
-      <div className="product-card">
+    <div className="product-card">
+      <Link to={`/products/${product.id}`} className="product-card-link">
         <div className="product-image">
           <img src={imageUrl} alt={product.name} />
         </div>
@@ -27,7 +38,15 @@ export function ProductCard({ product }) {
             </div>
           )}
         </div>
+      </Link>
+      <div className="product-card-footer">
+        <button
+          className={`add-to-cart-btn${added ? ' added' : ''}`}
+          onClick={handleAddToCart}
+        >
+          {added ? '✓ Added' : 'Add to Cart'}
+        </button>
       </div>
-    </Link>
+    </div>
   )
 }

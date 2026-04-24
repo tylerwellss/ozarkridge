@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 import './ProductDetail.css'
 
 function formatLabel(key) {
@@ -75,9 +76,17 @@ function ProductDetailSkeleton() {
 export function ProductDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
+  const { addToCart } = useCart()
   const [product, setProduct] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [added, setAdded] = useState(false)
+
+  function handleAddToCart() {
+    addToCart(product)
+    setAdded(true)
+    setTimeout(() => setAdded(false), 1500)
+  }
 
   useEffect(() => {
     setIsLoading(true)
@@ -145,6 +154,13 @@ export function ProductDetail() {
               ))}
             </div>
           )}
+
+          <button
+            className={`detail-add-to-cart-btn${added ? ' added' : ''}`}
+            onClick={handleAddToCart}
+          >
+            {added ? '✓ Added to Cart' : 'Add to Cart'}
+          </button>
 
           <div className="detail-description-section">
             <h2 className="section-heading">About this product</h2>

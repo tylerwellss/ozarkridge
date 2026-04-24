@@ -203,6 +203,19 @@
   cursor: not-allowed;
 }
 
+/* ── Product links in chat ──────────────────────── */
+.chat-link {
+  color: #2d6a4f;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(45, 106, 79, 0.4);
+  text-underline-offset: 2px;
+}
+.chat-link:hover {
+  color: #1b4332;
+  text-decoration-color: #1b4332;
+}
+
 /* ── Mobile ─────────────────────────────────────── */
 @media (max-width: 480px) {
   .chat-widget {

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { useMatch } from 'react-router-dom'
+import { Link, useMatch } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 import './ChatWidget.css'
 
 function TypingIndicator() {
@@ -12,25 +13,49 @@ function TypingIndicator() {
   )
 }
 
+// Parse markdown links [text](url) and return an array of strings and link objects
+function parseChatLinks(text) {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g
+  const parts = []
+  let lastIndex = 0
+  let match
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) parts.push(text.slice(lastIndex, match.index))
+    parts.push({ type: 'link', label: match[1], href: match[2] })
+    lastIndex = match.index + match[0].length
+  }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex))
+  return parts
+}
+
+function ChatBubble({ content }) {
+  const parts = parseChatLinks(content)
+  return (
+    <div className="chat-bubble">
+      {parts.map((part, i) =>
+        typeof part === 'string' ? (
+          part
+        ) : (
+          <Link key={i} to={part.href} className="chat-link">
+            {part.label}
+          </Link>
+        ),
+      )}
+    </div>
+  )
+}
+
 export function ChatWidget() {
   const [open, setOpen] = useState(false)
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const bottomRef = useRef(null)
+  const { addToCart } = useCart()
 
   // Detect if we're on a product detail page and grab the product ID
   const match = useMatch('/products/:id')
   const currentProductId = match?.params?.id ?? null
-
-  // Clear chat when navigating to a different product
-  const prevProductId = useRef(currentProductId)
-  useEffect(() => {
-    if (prevProductId.current !== currentProductId) {
-      setMessages([])
-      prevProductId.current = currentProductId
-    }
-  }, [currentProductId])
 
   // Scroll to bottom when messages change
   useEffect(() => {
@@ -62,6 +87,9 @@ export function ChatWidget() {
       })
       if (!res.ok) throw new Error('Request failed')
       const data = await res.json()
+      if (data.add_to_cart?.length) {
+        data.add_to_cart.forEach((product) => addToCart(product))
+      }
       setMessages([...updatedHistory, { role: 'assistant', content: data.response }])
     } catch {
       setMessages([
@@ -105,7 +133,11 @@ export function ChatWidget() {
             )}
             {messages.map((msg, i) => (
               <div key={i} className={`chat-message ${msg.role}`}>
-                <div className="chat-bubble">{msg.content}</div>
+                {msg.role === 'assistant' ? (
+                  <ChatBubble content={msg.content} />
+                ) : (
+                  <div className="chat-bubble">{msg.content}</div>
+                )}
               </div>
             ))}
             {isLoading && <TypingIndicator />}
