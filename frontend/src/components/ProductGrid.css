@@ -5,12 +5,31 @@
   margin-top: 2rem;
 }
 
+.product-skeleton {
+  height: 340px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f2f6fa 25%, #e6edf5 50%, #f2f6fa 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 .empty-state {
   padding: 2rem;
   text-align: center;
-  color: #666;
+  color: #4b5563;
   font-size: 16px;
-  background-color: #f9f9f9;
+  background-color: #f4f7fb;
+  border: 1px solid #e3ebf4;
   border-radius: 8px;
   margin-top: 2rem;
 }

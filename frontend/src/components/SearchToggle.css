@@ -1,0 +1,30 @@
+.search-toggle {
+  display: inline-flex;
+  border: 1px solid #b5c7df;
+  border-radius: 999px;
+  background: #f5faff;
+  padding: 4px;
+  margin-top: 0.25rem;
+}
+
+.toggle-button {
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #1e3a5f;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.toggle-button.active {
+  background: #0a7a4d;
+  color: #f8fff8;
+}
+
+.toggle-button:focus-visible {
+  outline: 2px solid #0a7a4d;
+  outline-offset: 2px;
+}

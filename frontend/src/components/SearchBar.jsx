@@ -1,9 +1,6 @@
-import { useState } from 'react'
 import './SearchBar.css'
 
-export function SearchBar({ onSearch, isLoading }) {
-  const [query, setQuery] = useState('')
-
+export function SearchBar({ onSearch, isLoading, query, onQueryChange, mode }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (query.trim()) {
@@ -15,9 +12,13 @@ export function SearchBar({ onSearch, isLoading }) {
     <form className="search-bar" onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Search products..."
+        placeholder={
+          mode === 'ai'
+            ? 'Ask naturally, e.g. something warm for cold nights at camp'
+            : 'Search products by keyword...'
+        }
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => onQueryChange(e.target.value)}
         disabled={isLoading}
         className="search-input"
       />

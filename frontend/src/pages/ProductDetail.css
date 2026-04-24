@@ -1,0 +1,246 @@
+.product-detail {
+  padding-bottom: 3rem;
+}
+
+/* ─── breadcrumb ─────────────────────────────────────────── */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 13px;
+  color: #6b7280;
+  margin: 1.25rem 0;
+}
+
+.breadcrumb a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-sep {
+  color: #9ca3af;
+}
+
+.breadcrumb-current {
+  color: #374151;
+  font-weight: 500;
+  /* Truncate long product names */
+  max-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ─── two-column layout ──────────────────────────────────── */
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .product-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* ─── image ──────────────────────────────────────────────── */
+.product-detail-image-col {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.product-detail-image {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── info column ────────────────────────────────────────── */
+.detail-brand {
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.detail-name {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.25;
+}
+
+.detail-price {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0066cc;
+}
+
+/* ─── tags ───────────────────────────────────────────────── */
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.detail-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: #f0f4ff;
+  color: #1e3a8a;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #c7d7fd;
+}
+
+/* ─── description ─────────────────────────────────────────── */
+.detail-description-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-heading {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.detail-description {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ─── specs table ────────────────────────────────────────── */
+.specs-section {
+  margin-top: 0.25rem;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.specs-table tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.specs-table th {
+  text-align: left;
+  padding: 8px 0;
+  color: #6b7280;
+  font-weight: 500;
+  width: 42%;
+}
+
+.specs-table td {
+  padding: 8px 0;
+  color: #111827;
+  font-weight: 600;
+}
+
+/* ─── back button ────────────────────────────────────────── */
+.detail-back {
+  margin-top: 2.5rem;
+}
+
+.back-button {
+  background: none;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.back-button:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+/* ─── error state ────────────────────────────────────────── */
+.product-detail-error {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+/* ─── skeleton loading ───────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-base {
+  background: linear-gradient(90deg, #f2f6fa 25%, #e6edf5 50%, #f2f6fa 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-radius: 6px;
+}
+
+.product-detail-skeleton {
+  padding-bottom: 2rem;
+}
+
+.skeleton-breadcrumb {
+  height: 14px;
+  width: 250px;
+  margin: 1.25rem 0;
+  background: linear-gradient(90deg, #f2f6fa 25%, #e6edf5 50%, #f2f6fa 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-radius: 6px;
+}
+
+.skeleton-image {
+  width: 100%;
+  height: 420px;
+  background: linear-gradient(90deg, #f2f6fa 25%, #e6edf5 50%, #f2f6fa 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-radius: 12px;
+}
+
+.skeleton-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.skeleton-line {
+  height: 16px;
+  background: linear-gradient(90deg, #f2f6fa 25%, #e6edf5 50%, #f2f6fa 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite linear;
+  border-radius: 6px;
+}
+
+.skeleton-line.wide { width: 90%; }
+.skeleton-line.medium { width: 60%; }
+.skeleton-line.short { width: 30%; }

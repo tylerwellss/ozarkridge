@@ -10,6 +10,15 @@
   text-align: center;
 }
 
+.app-header-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-header-link:hover h1 {
+  opacity: 0.9;
+}
+
 .app-header h1 {
   margin: 0 0 0.5rem 0;
   font-size: 2.5rem;
@@ -26,6 +35,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  text-align: left;
 }
 
 .error-message {
@@ -38,12 +48,37 @@
 }
 
 .search-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
   padding: 1rem;
   background-color: #f0f7ff;
   border-left: 4px solid #0066cc;
   border-radius: 4px;
   margin: 1rem 0;
   color: #333;
+}
+
+.mode-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.mode-keyword {
+  background-color: #e8f1ff;
+  color: #0f3f78;
+}
+
+.mode-ai {
+  background-color: #e6f7ee;
+  color: #0e5a39;
 }
 
 @media (max-width: 768px) {

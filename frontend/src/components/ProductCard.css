@@ -1,14 +1,21 @@
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .product-card {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   overflow: hidden;
   transition: box-shadow 0.2s, transform 0.2s;
   background: white;
+  height: 100%;
 }
 
-.product-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+.product-card-link:hover .product-card {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
 }
 
 .product-image {
