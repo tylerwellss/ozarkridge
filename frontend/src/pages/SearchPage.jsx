@@ -131,7 +131,15 @@ export function SearchPage() {
         hasQuery={Boolean(submittedQuery)}
       />
 
-      {error && <div className="error-message">Error: {error}</div>}
+      {error && (
+        <div className="error-message">
+          {error.includes('503') || error.includes('unavailable')
+            ? 'AI search is temporarily unavailable. Try switching to keyword mode, or try again in a moment.'
+            : error.includes('Failed to fetch') || error.includes('NetworkError')
+            ? 'Could not reach the server. Make sure the backend is running.'
+            : `Search error: ${error}`}
+        </div>
+      )}
 
       {submittedQuery && !isLoading && (
         <div className="search-info">

@@ -154,5 +154,8 @@ async def ai_search(request: AISearchRequest, db: AsyncSession = Depends(get_db)
             "products": ranked_products
         }
         
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"AI search failed: {str(e)}")
+    except json.JSONDecodeError:
+        # Claude returned something but it wasn't valid JSON — return products without a summary
+        return {"summary": "Here are the most relevant products I found for your search.", "products": products}
+    except Exception:
+        raise HTTPException(status_code=503, detail="AI search is temporarily unavailable. Please try again.")

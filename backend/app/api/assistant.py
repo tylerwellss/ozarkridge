@@ -95,11 +95,13 @@ async def assistant(request: AssistantRequest, db: AsyncSession = Depends(get_db
     messages.append({"role": "user", "content": request.message})
 
     client = AsyncAnthropic(api_key=settings.anthropic_api_key)
-    response = await client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=1024,
-        system=system_prompt,
-        messages=messages,
-    )
-
-    return {"response": response.content[0].text}
+    try:
+        response = await client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=1024,
+            system=system_prompt,
+            messages=messages,
+        )
+        return {"response": response.content[0].text}
+    except Exception:
+        raise HTTPException(status_code=503, detail="AI assistant is temporarily unavailable. Please try again.")
