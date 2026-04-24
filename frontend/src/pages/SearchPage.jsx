@@ -4,6 +4,8 @@ import { SearchToggle } from '../components/SearchToggle'
 import { AISummary } from '../components/AISummary'
 import { ProductGrid } from '../components/ProductGrid'
 
+const PAGE_SIZE = 20
+
 export function SearchPage() {
   const [results, setResults] = useState([])
   const [query, setQuery] = useState('')
@@ -11,7 +13,10 @@ export function SearchPage() {
   const [searchMode, setSearchMode] = useState('keyword')
   const [aiSummary, setAiSummary] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [isLoadingMore, setIsLoadingMore] = useState(false)
   const [error, setError] = useState(null)
+  const [page, setPage] = useState(1)
+  const [hasMore, setHasMore] = useState(false)
   const hasInitializedFromUrl = useRef(false)
 
   const updateUrlState = (nextQuery, nextMode) => {
@@ -26,16 +31,24 @@ export function SearchPage() {
     window.history.replaceState({}, '', `/search${qs ? `?${qs}` : ''}`)
   }
 
-  const runSearch = async (searchQuery, modeOverride) => {
+  const runSearch = async (searchQuery, modeOverride, pageNum = 1) => {
     const trimmedQuery = searchQuery.trim()
     if (!trimmedQuery) return
 
     const modeToUse = modeOverride ?? searchMode
-    setSubmittedQuery(trimmedQuery)
-    setIsLoading(true)
-    setError(null)
-    setAiSummary('')
-    updateUrlState(trimmedQuery, modeToUse)
+    const isFirstPage = pageNum === 1
+
+    if (isFirstPage) {
+      setSubmittedQuery(trimmedQuery)
+      setIsLoading(true)
+      setError(null)
+      setAiSummary('')
+      setPage(1)
+      setHasMore(false)
+      updateUrlState(trimmedQuery, modeToUse)
+    } else {
+      setIsLoadingMore(true)
+    }
 
     try {
       let response
@@ -46,7 +59,7 @@ export function SearchPage() {
           body: JSON.stringify({ query: trimmedQuery }),
         })
       } else {
-        const params = new URLSearchParams({ q: trimmedQuery })
+        const params = new URLSearchParams({ q: trimmedQuery, page: pageNum, limit: PAGE_SIZE })
         response = await fetch(`/api/search/keyword?${params}`)
       }
 
@@ -56,16 +69,28 @@ export function SearchPage() {
       if (modeToUse === 'ai') {
         setAiSummary(data.summary || '')
         setResults(data.products || [])
+        setHasMore(false)
       } else {
-        setResults(data.results || [])
+        const newItems = data.results || []
+        setResults((prev) => (isFirstPage ? newItems : [...prev, ...newItems]))
+        setHasMore(newItems.length === PAGE_SIZE)
       }
     } catch (err) {
       setError(err.message)
-      setResults([])
-      setAiSummary('')
+      if (isFirstPage) {
+        setResults([])
+        setAiSummary('')
+      }
     } finally {
       setIsLoading(false)
+      setIsLoadingMore(false)
     }
+  }
+
+  const loadMore = () => {
+    const nextPage = page + 1
+    setPage(nextPage)
+    runSearch(submittedQuery, searchMode, nextPage)
   }
 
   const handleModeChange = async (nextMode) => {
@@ -123,6 +148,14 @@ export function SearchPage() {
         mode={searchMode}
         hasSearched={Boolean(submittedQuery)}
       />
+
+      {!isLoading && hasMore && (
+        <div className="load-more-row">
+          <button className="load-more-btn" onClick={loadMore} disabled={isLoadingMore}>
+            {isLoadingMore ? 'Loading…' : 'Load more'}
+          </button>
+        </div>
+      )}
     </div>
   )
 }

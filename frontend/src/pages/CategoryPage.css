@@ -28,21 +28,6 @@
   margin-top: 2rem;
 }
 
-.load-more-btn {
-  background: #2d6a4f;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 32px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.load-more-btn:hover {
-  background: #1b4332;
-}
-
 .loading-more-text {
   color: #64748b;
   font-size: 14px;
