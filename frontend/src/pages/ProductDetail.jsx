@@ -16,13 +16,13 @@ function Breadcrumb({ category, subcategory, name }) {
     <nav className="breadcrumb" aria-label="Breadcrumb">
       <Link to="/">Home</Link>
       <span className="breadcrumb-sep">›</span>
-      <Link to={`/?q=${encodeURIComponent(category)}&mode=keyword`}>
+      <Link to={`/search?q=${encodeURIComponent(category)}&mode=keyword`}>
         {formatCategory(category)}
       </Link>
       {subcategory && (
         <>
           <span className="breadcrumb-sep">›</span>
-          <Link to={`/?q=${encodeURIComponent(subcategory)}&mode=keyword`}>
+          <Link to={`/search?q=${encodeURIComponent(subcategory)}&mode=keyword`}>
             {formatCategory(subcategory)}
           </Link>
         </>

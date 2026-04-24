@@ -23,7 +23,7 @@ export function SearchPage() {
     }
     params.set('mode', nextMode)
     const qs = params.toString()
-    window.history.replaceState({}, '', `/${qs ? `?${qs}` : ''}`)
+    window.history.replaceState({}, '', `/search${qs ? `?${qs}` : ''}`)
   }
 
   const runSearch = async (searchQuery, modeOverride) => {
@@ -89,7 +89,7 @@ export function SearchPage() {
   }, [])
 
   return (
-    <>
+    <div className="search-page">
       <SearchToggle mode={searchMode} onChange={handleModeChange} />
       <SearchBar
         onSearch={(q) => runSearch(q)}
@@ -123,6 +123,6 @@ export function SearchPage() {
         mode={searchMode}
         hasSearched={Boolean(submittedQuery)}
       />
-    </>
+    </div>
   )
 }
