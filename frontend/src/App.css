@@ -146,4 +146,12 @@
     font-size: 13px;
     padding: 5px 8px;
   }
+  .search-page,
+  .categories-page,
+  .category-page {
+    padding: 1.25rem 1rem;
+  }
+  .search-info {
+    font-size: 13px;
+  }
 }
